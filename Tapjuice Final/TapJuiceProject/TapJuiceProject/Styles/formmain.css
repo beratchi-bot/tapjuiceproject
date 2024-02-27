@@ -1,0 +1,341 @@
+/*the main working*/
+@font-face {
+  font-family: "ProtoGrotesk-Light";
+  src: url("../Fonts/ProtoGrotesk-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ProtoGrotesk-Regular";
+  src: url("../Fonts/ProtoGrotesk-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NeueHaasUnica";
+  src: url("../Fonts/NeueHaasUnica-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../Fonts/Inter-Bold.ttf") format("truetype");
+}
+
+/* Reset or normalize styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ /* heather da pagina */
+
+body{
+    background-color: rgb(27, 19, 19);
+    overflow-x: hidden;
+    color:#e8e1ee;
+    overflow-y: auto;
+}
+
+.star_button{
+  height: 20vh;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+}
+
+h1, .heatherFrom {
+  color: #f7f7f7;
+  text-align: left;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "ProtoGrotesk-Light";
+  font-size: 9.5vw;
+  margin-top: 9vh;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  margin-bottom: 0px;
+  letter-spacing: -0.2rem;
+  display: block;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+p{
+  color: #FFF;
+  font-family: "ProtoGrotesk-Light";
+  font-size:  1.21375vw;
+  padding-left: 20px;
+  font-weight: 400;
+  line-height: 1.5625rem;
+}
+
+#mydescription {
+  text-align: left;
+  padding-top: 1.5%;
+  padding-left: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+/* Refere-se ao styling a checkbox que queremos escondida */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Efeitos para a label-box*/
+label {
+  display: block;
+  padding-left: 65px;
+  padding: 20px;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+  margin: 10px;
+  background-color: #8d9ae2;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.8s, transform 0.8s ease; /* Combine transitions */
+  border-radius: 14px;
+}
+
+/* elementos no interior da box violeta interativa */
+h3{
+  color: #A4B0F5;
+  font-family: "ProtoGrotesk-Light";
+  font-size: 2.5625vw;
+  padding-left: 20px;
+  font-style: bolder;
+  font-weight: 300;
+}
+
+label h3 {
+  line-height: 5px;
+  color: #FFF;
+  line-height: 2.9rem;
+  text-transform: uppercase;
+}
+
+label p{
+  font-size: 1.54vw;
+  font-weight: 100;
+  padding-left: 20px;
+  margin-top: 2vh;
+  line-height: 1.9rem;
+}
+
+form h3{
+  font-size: 19px;
+}
+
+label:hover {
+  background-color: #e45a81;
+  transform: scale(0.97);
+}
+
+/* Espaço entre divs */
+.toggle-container {
+  margin-bottom: 26px;
+}
+
+/* inicializar o form escondido */
+.toggle-container form {
+  display: none;
+  height: 0;
+  overflow: hidden;
+  align-items: center;
+  opacity: 0.6;
+  transition: height 0.3s ease-in-out, opacity 0.5s ease 0.5s; /* Combine transitions */
+}
+
+/* inicializar a box, apos ativarmos a checkbox */
+input[type="checkbox"]:checked ~ label + form {
+  display: flex;
+  height: auto;
+  align-items: center;
+  overflow-x: hidden;
+  opacity: 1;
+  padding: 30px;
+}
+
+/*o que correções no inteior dos forms ? */
+/* Usei o estilo de um bootstrap form e adaptei */
+.form-group {
+  margin: 20px;
+  width: 70%;
+}
+
+textarea{
+  height: 18vh;
+}
+h3 {
+  align-items: center;
+  line-height: 30px;
+}
+form{
+  background-color: #1a222b3e;
+  border-radius: 0.4em;
+  padding: 10px;
+}
+input,
+select,
+textarea {
+            min-width: 60%;
+            max-width: 80%;
+            padding: 1em;
+            margin-top: 0.3rem;
+            margin-bottom: 1.5em;
+            margin-left: 15px;
+            border: 0.1em solid #ced4da;
+            border-radius: 0.4em;
+            box-sizing: border-box;
+}
+.buttonX {
+            background-color: #d9073b;
+            color: #dcdcdc;
+            padding: 1em 2em;
+            border: none;
+            border-radius: 0.4em;
+            cursor: pointer;
+}
+.buttonX:hover {
+            background-color: #da6003;
+            border-radius: 0.9em;
+}
+.buttonX.secondary {
+            background-color: #7d6c76;
+}
+.buttonX.secondary:hover {
+            background-color: #5d5462;
+}
+
+/*uso das imagens em slideshow abaixo*/
+
+
+@keyframes display {
+  0% {
+    transform: translateX(10vw);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(-30vw);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-5vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50vw);
+    opacity: 0;
+  }
+}
+
+.pic-ctn {
+  position: relative;
+  width: 10vw;
+  margin-top: 15vh;
+  padding: 0;
+  margin: 0;
+}
+
+.pic-ctn > img {
+  position: relative;
+  top: 0;
+  width: 65vh;
+  left: 20vh;
+  opacity: 0;
+  animation: display 10s infinite;
+  border-radius: 15px;
+}
+
+
+
+
+img:nth-child(2) {
+  animation-delay: 2s;
+}
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+img:nth-child(4) {
+  animation-delay: 6s;
+}
+img:nth-child(5) {
+  animation-delay: 8s;
+}
+
+/*image correction to disapper in lower screens and font adjustments*/
+@media (max-width: 1200px) {
+.pic-ctn {
+    display: none;
+    width: 0% !important;
+}
+input[type="checkbox"]:checked ~ label + form {
+  display: block;
+  width: 100% !important;
+}
+
+input,
+select,
+.form-group,
+textarea {
+      width: 95%;
+      max-width: 100%;
+      overflow-x: hidden;
+}
+#mydescription{
+  font-size: 3vw;
+  line-height: 4rem;
+}
+.labelh3{
+  font-size: 3vw;
+  line-height: 3rem;
+}
+label p{
+  font-size: 2vw;
+}
+
+}
+
+/*------------mobile corrections -----------------------------------*/
+  
+@media screen and (max-width: 500px){
+      body{
+        width: 98%;
+      }
+      input[type="checkbox"]:checked ~ label + form {
+        padding: 10px;
+      }
+      label{
+        font-size: 5vw;
+      }
+      form ,textarea, input {
+        width: 89%;
+      }
+      h1 {
+        font-size: 25.5vw;
+        font-style: normal;
+        font-weight: 550;
+        margin-top: 3vh;
+        padding-bottom: 0px;
+        padding-left: 5px;
+        margin-bottom: 0px;
+        line-height: auto;
+        text-wrap: wrap;
+      }
+      #mydescription{
+        font-size: 6vw;
+        line-height: 2rem;
+      }
+      .labelh3{
+        font-size: 6vw;
+        line-height: 2rem;
+      }
+      label p{
+        font-size: 4vw;
+      }
+      .pic-ctn {
+        display:none !important;
+      }
+}

@@ -1,0 +1,78 @@
+.container2 {
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    margin: 0px;
+    padding: 0px;
+    max-width: 60vw;
+    overflow: hidden;
+    z-index: -1000;
+    &:before, &:after {
+        content: "";
+        width: 45vmax;
+        height: 100vmax;
+        position: absolute;
+        background:rgba(250, 134, 169, 0.281);
+        left: -20vmin;
+        top: -20vmin;
+        animation: morph 13s linear infinite alternate, spin 19s linear infinite;
+        z-index: -1001;
+        will-change: border-radius, transform;
+        transform-origin: 55% 55%;
+        pointer-events: none;
+    }
+    &:after {
+        width: 65vmin;
+        height: 70vmin;
+        left: auto;
+        right: 0vmin;
+        top: auto;
+        bottom: 0;
+        animation: morph 8s linear infinite alternate, spin 22s linear infinite reverse;
+        transform-origin: 20% 20%;
+    }
+}
+
+
+.bulb2 {
+    position: absolute;
+    width: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    &:after {
+        content: "";
+        display: block;
+    }
+}
+
+.bulb2__top {
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.bulb2__bottom {
+    width: 100%;
+    height: 82%;
+    background: #9961edc9;
+    position: absolute;
+    top: 10%;
+}
+
+
+@keyframes morph {
+    0% {
+        border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+    }
+    100% {
+        border-radius: 40% 60%;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}

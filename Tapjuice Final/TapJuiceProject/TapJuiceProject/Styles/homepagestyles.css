@@ -1,0 +1,748 @@
+@font-face {
+  font-family: "ProtoGrotesk-Light";
+  src: url("../Fonts/ProtoGrotesk-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ProtoGrotesk-Regular";
+  src: url("../Fonts/ProtoGrotesk-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NeueHaasUnica";
+  src: url("../Fonts/NeueHaasUnica-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../Fonts/Inter-Bold.ttf") format("truetype");
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: absolute;
+  text-align: center;
+}
+
+body {
+  overflow-x: hidden;
+  padding-bottom: 10px;
+}
+html, body, section {
+  block-size: 100%;
+  margin: 0;
+  scroll-snap-type: y mandatory;
+  /*ensure that all sections have consistent scroll-snap behavior*/
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal; /*the absulute was causing problems in my pc*/
+}
+
+#section1 {
+  color: #000000;
+  background: #ff6e13;
+  height: 100vh;
+  width: 100%;
+}
+
+#titulo {
+  color: #000000;
+  text-align: center;
+  position: absolute;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "ProtoGrotesk-Light";
+  font-size: 21.2vw;
+  padding-top: -4.5%;
+  margin-top: -4.5%;
+  z-index: 8;
+}
+
+#slogan {
+  position: absolute;
+  margin: 30% 0% 2% 0.5%;
+  font-size: 3.7vw;
+  font-family: "NeueHaasUnica";
+  color: #000;
+  letter-spacing: 0.1vw;
+  ;
+  line-height: 3.5vw;
+  z-index: 2;
+}
+
+#imgmainpage {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 55%;
+  z-index: 1;
+
+}
+
+#section2 {
+  color: #a4b0f5;
+  background: #000000;
+  height: 77.78vh;
+}
+
+#menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2%;
+  font-family: "ProtoGrotesk-Regular";
+  font-size: 1.5vw;
+}
+
+#navmenu {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  margin-top: 15%;
+  text-decoration: none;
+  font-size: 2.2vw;
+}
+
+.navlink {
+  text-decoration: none;
+  font-family: "NeueHaasUnica";
+  color: #a4b0f5;
+  margin: 0%;
+  padding: 0%;
+}
+
+#descricao {
+  display: block;
+  max-width: 55%;
+  float: right;
+  font-size: 2.6vw;
+  font-family: "NeueHaasUnica";
+  line-height: 2.5vw;
+  letter-spacing: -0.1vw;
+}
+
+#section3 {
+  color: #ffffff;
+  background: #959ED7;
+  height: 80.37vh;
+  position: relative;
+}
+
+#tituloentrevistas {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "ProtoGrotesk-Light";
+  margin-bottom: 2%;
+  margin-left: 2%;
+  font-size: 10vw;
+  letter-spacing: -0.6vw;
+  z-index: 2;
+}
+
+#descr-entrevistas {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 55%;
+  font-size: 2.7vw;
+  font-family: "NeueHaasUnica";
+  margin-top: 5%;
+  line-height: 2.4vw;
+  letter-spacing: 0.05vw;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+#entrevistasbutton {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 2.4%;
+  margin-right: 5%;
+  width: 13%;
+  z-index: 2;
+}
+
+#imgnoticias {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 58%;
+  margin-bottom: -15%;
+  z-index: 1;
+}
+
+#section4 {
+  color: #a4b0f5;
+  background: #000000;
+  height: 100vh;
+  position: relative;
+}
+
+#titulonoticias {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-family: "ProtoGrotesk-Light";
+  margin-bottom: 2%;
+  margin-left: 2%;
+  font-size: 10vw;
+  letter-spacing: -0.6vw;
+  z-index: 2;
+}
+
+#descr-noticias {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 55%;
+  margin-top: 17%;
+  margin-left: 2%;
+  font-family: "NeueHaasUnica";
+  font-size: 2.7vw;
+  line-height: 2.4vw;
+  letter-spacing: 0.05vw;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+#noticiasbutton {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 2.4%;
+  margin-right: 5%;
+  width: 13%;
+  z-index: 3;
+}
+
+#section5 {
+  height: 50vh;
+  background-color: #ff6e13;
+  color: #000000;
+  position: relative;
+}
+
+#titulocontatos {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 2.4vw;
+  font-family: "ProtoGrotesk-Regular";
+  margin: 2% 0% 0% 2%;
+}
+
+#descr-contato {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin-top: 10%;
+  text-align: center;
+  font-size: 2.1vw;
+  font-family: "ProtoGrotesk-Regular";
+}
+
+
+#descr-email {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 13%;
+  font-family: "NeueHaasUnica";
+  font-size: 1.1vw;
+  text-align: center;
+}
+
+
+#instagram {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0%;
+  width: 4%;
+  margin-top: 17%;
+  margin-right: 45%;
+
+}
+
+#mail {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0%;
+  right: 0%;
+  width: 4%;
+  margin-top: 17%;
+  margin-left: 45%;
+}
+
+footer {
+  position: relative;
+  height: 49vh;
+  background-color: #ff6e13;
+}
+
+#h2footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 3%;
+  font-size: 2.6vw;
+  font-family: "Inter";
+  text-align: center;
+
+
+}
+
+#formbutton {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 13%;
+  margin-top: 7%;
+
+}
+
+#copyright {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  font-family: "Inter";
+  text-align: center;
+  font-size: 0.7vw;
+}
+
+/* -------------------------------------tamanho intermedio ----------------------------------------*/
+@media screen and (min-width: 781px) and (max-width: 1100px)  {
+
+
+  /*section 1*/
+
+#section1 {
+    position: relative;
+    height: 70vh;
+}
+
+#slogan {
+    font-size: 4vw;
+    line-height: 4.5vw;
+}
+
+  /*section 2*/
+
+#section2 {
+  height: 59vh;
+}
+
+#menu {
+  font-size: 3.5vw;
+}
+
+#navmenu {
+  font-size: 2.5vw;
+  padding-top: 15%;
+}
+
+#descricao {
+  max-width: 70%;
+  font-size: 2.5vw;
+  line-height: 3.5vw;
+  letter-spacing: -0.1vw;
+  margin-right: 2%;
+}
+
+/*section 3*/
+
+#section3 {
+  height: 57vh;
+}
+#tituloentrevistas {
+  margin-bottom: 8%;
+}
+
+#descr-entrevistas {
+  margin-top: 2%;
+  max-width: 70%;
+  font-size: 2.5vw;
+  line-height: 3.5vw;
+  margin-right: 2%;
+}
+
+#entrevistasbutton {
+  width: 20%;
+}
+
+/*section 4*/
+
+#section4 {
+  height: 89vh;
+}
+
+#descr-noticias {
+  max-width: 70%;
+  margin-top: 17%;
+  font-size: 2.5vw;
+  line-height: 3.5vw;
+  margin-right: 2%;
+}
+
+#noticiasbutton {
+   width: 20%;
+}
+
+/*section 5*/
+
+#section5 {
+  height: 30vh;
+}
+#titulocontatos {
+  font-size: 3vw;
+ }
+
+#descr-contato {
+  font-size: 3vw;
+}
+#descr-email {
+  margin-top: 16%;
+  font-size: 2vw;
+  text-align: center;
+}
+
+
+#instagram {
+  width: 5%;
+  margin-top: 18%;
+  padding: 40px;
+  margin-right: 35%;
+}
+
+#mail {
+  width: 5%;
+  margin-top: 18%;
+  padding: 40px;
+  margin-left: 35%;
+}
+
+footer {
+  height: 50vh;
+}
+
+#h2footer {
+  font-size: 2vw;
+  }
+
+#formbutton {
+  width: 20%;
+  margin-top: 10%;
+
+}
+
+#copyright {
+  font-size: 2vw;
+}
+
+
+}
+ /* ------------------------------------tamanho tablets-------------------------------------------- */
+
+@media screen and (min-width: 501px) and (max-width: 780px)  {
+
+
+  /*section 1*/
+
+#titulo {
+  position: absolute;
+}
+
+#section1 {
+    position: relative;
+    height: 40vh;
+}
+
+#slogan {
+    font-size: 2vw;
+    line-height: 2.5vw;
+}
+
+  /*section 2*/
+
+#section2 {
+  height: 49vh;
+}
+
+#menu {
+  font-size: 3vw;
+}
+
+#navmenu {
+  font-size: 2vw;
+  padding-top: 15%;
+}
+
+#descricao {
+  max-width: 70%;
+  font-size: 2.5vw;
+  line-height: 3.5vw;
+  letter-spacing: -0.1vw;
+  margin-right: 2%;
+}
+
+/*section 3*/
+
+#section3 {
+  height: 47vh;
+}
+#tituloentrevistas {
+  margin-bottom: 8%;
+}
+
+#descr-entrevistas {
+  margin-top: 2%;
+  max-width: 70%;
+  font-size: 2.5vw;
+  line-height: 3.5vw;
+  margin-right: 2%;
+}
+
+#entrevistasbutton {
+  width: 20%;
+}
+
+/*section 4*/
+
+#section4 {
+  height: 60vh;
+}
+
+#descr-noticias {
+  max-width: 70%;
+  margin-top: 17%;
+  font-size: 2.5vw;
+  line-height: 3.5vw;
+  margin-right: 2%;
+}
+
+#noticiasbutton {
+   width: 20%;
+}
+
+/*section 5*/
+
+#section5 {
+  height: 39vh;
+}
+#titulocontatos {
+  font-size: 4vw;
+ }
+
+#descr-contato {
+  font-size: 4vw;
+}
+#descr-email {
+  margin-top: 16%;
+  font-size: 4vw;
+  text-align: center;
+}
+#instagram {
+  width: 5%;
+  margin-top: 25%;
+  margin-right: 35%;
+}
+
+#mail {
+  width: 5%;
+  margin-top: 25%;
+  margin-left: 35%;
+}
+
+footer {
+  height: 33vh;
+}
+
+#h2footer {
+  font-size: 4vw;
+  }
+
+#formbutton {
+  width: 20%;
+  margin-top: 10%;
+
+}
+
+#copyright {
+  font-size: 2vw;
+}
+}
+
+ /* ------------------------------------tamanho smartphones----------------------------------------- */
+@media screen and (min-width: 280px) and (max-width: 500px) {
+
+
+  /*section 1*/
+
+  #section1 {
+    position: relative;
+    height: 30vh;
+  }
+
+  #imgmainpage {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+  }
+
+  #slogan {
+    font-size: 4vw;
+    line-height: 4.5vw;
+  }
+
+  /*section 2*/
+
+#section2 {
+  height: 25vh;
+}
+
+#menu {
+  font-size: 3.5vw;
+}
+
+#navmenu {
+  font-size: 2.5vw;
+  padding-top: 15%;
+}
+
+#descricao {
+  max-width: 70%;
+  font-size: 2.5vw;
+  line-height: 3vw;
+  letter-spacing: -0.1vw;
+  margin-right: 2%;
+}
+
+/*section 3*/
+
+#section3 {
+  height: 27vh;
+}
+
+#descr-entrevistas {
+  margin-top: 2%;
+  max-width: 70%;
+  font-size: 2.5vw;
+  line-height: 3vw;
+  margin-right: 2%;
+}
+
+#entrevistasbutton {
+  width: 20%;
+}
+
+/*section 4*/
+
+#section4 {
+  height: 38vh;
+}
+
+#descr-noticias {
+  max-width: 70%;
+  margin-top: 17%;
+  font-size: 2.5vw;
+  line-height: 3vw;
+  margin-right: 2%;
+}
+
+#noticiasbutton {
+  width: 20%;
+}
+
+/*section 5*/
+
+#section5 {
+  height: 30vh;
+}
+#titulocontatos {
+  font-size: 4vw;
+}
+#descr-contato {
+  font-size: 3vw;
+}
+#descr-email {
+  margin-top: 16%;
+  font-size: 3vw;
+  text-align: center;
+}
+#instagram {
+  width: 5%;
+  margin-top: 25%;
+  margin-right: 35%;
+}
+#mail {
+  width: 5%;
+  margin-top: 25%;
+  margin-left: 35%;
+}
+
+footer {
+  height: 45vh;
+}
+
+#h2footer {
+  font-size: 4vw;
+  }
+
+#formbutton {
+  width: 20%;
+  margin-top: 10%;
+
+}
+
+#copyright {
+  font-size: 1.9vw;
+  margin-top: 20px;
+}
+
+
+}
+
+/* ---------------------------------este ja foi excagero, sorry, mas assim, ja fica---------------------*/
+@media screen and (max-width: 279px) {
+  #section1 {
+    height: 20vh;
+  }
+  #imgmainpage{
+    position: relative;
+    top: 10vh;
+    right:-15vh;
+  }
+  #section2 {
+    height: 20vh;
+  }
+  #section3 {
+    height: 20vh;
+  }
+  #section4 {
+    height: 20vh;
+  }
+  #section5 {
+    height: 10vh;
+  }
+  footer {
+    height: 15vh;
+  }
+}

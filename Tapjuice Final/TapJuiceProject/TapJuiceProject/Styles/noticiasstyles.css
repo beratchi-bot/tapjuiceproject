@@ -1,0 +1,290 @@
+@font-face {
+  font-family: "ProtoGrotesk-Light";
+  src: url("../Fonts/ProtoGrotesk-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ProtoGrotesk-Regular";
+  src: url("../Fonts/ProtoGrotesk-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NeueHaasUnica";
+  src: url("../Fonts/NeueHaasUnica-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../Fonts/Inter-Bold.ttf") format("truetype");
+}
+
+body, h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: 0;
+
+}
+body {
+  box-sizing: border-box; 
+  width: 100%;
+  color: #A4B0F5;
+  background: #000000;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+#title{ 
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "ProtoGrotesk-Light";
+  font-size: 9vw;
+  position: fixed; /* Position absolute */
+  top: 0; 
+  left: 0;
+  margin: 10% 3% 3% 3%;
+}
+
+#noticiasbutton2 {
+  margin: 2% 3% 3% 3%;
+  width: 10%; 
+}
+#conteudo {
+  display: flex;
+}
+
+#imgnews {
+  display: inline-block;
+  vertical-align: top; 
+  margin: 0% 3% 3% 3%;
+}
+
+
+.textoesquerda {
+  display: inline-block;
+  vertical-align: top; 
+  max-width: 45%;
+  margin: 0% 0% 3% 3%;
+  
+}
+
+#proxevento{
+  font-family:  "NeueHaasUnica";
+  font-size:2vw;
+  margin-bottom: 5%;
+}
+.titulonoticia {
+  font-family:  "ProtoGrotesk-Regular";
+  font-size: 1vw;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 2%;
+
+ 
+}
+.descricaonoticia {
+  font-family: "NeueHaasUnica";
+  text-transform: uppercase;
+  font-size: 1vw;
+  padding-bottom: 2%;
+}
+
+footer {
+  clear: both; /* Clear any floated or inline-block elements */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 3% 3% 3% 3%;
+}
+
+h2 {
+  color: #A4B0F5;
+  font-family:  "NeueHaasUnica";
+  font-size:2vw;
+  letter-spacing: 0.1vw;
+}
+
+.email {
+  padding: 0.5% 0.5% 0.5% 0.5%;
+  margin: 1% 0.5% 1% 0%;
+  font-size: 1vw;
+  width: 20%;
+  border-radius: 15px;
+  text-align: center;
+  background-color: #cccccc;
+
+}
+.email:focus { /*email when selected*/
+  outline: none; }
+
+
+ .email::placeholder {
+    color: #6d6d6d;
+  }
+
+
+.subscribe {
+  font-family:  "ProtoGrotesk-Regular";
+  padding: 0.5% 0.5% 0.5% 0%;;
+  margin: 1% 0.5% 1% 0%;
+  font-size: 0.8vw;
+  text-transform: uppercase;
+  width: 7%;
+  background-color: #7285f2;
+  color: #E9F7CA;
+  border-radius: 15px;
+  cursor: pointer;
+ 
+}
+
+.subscribe:hover {
+  background-color: #3b56f1;
+ 
+}
+
+
+/*------------------------------- media queries tablet ------------------------------- */
+
+@media screen and (min-width: 501px) and (max-width: 1248px) { /* tamanho tablets) */
+  body{
+    max-width: auto;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    position: relative;
+    flex-direction: row;
+    margin: 3%;
+    }
+    
+
+  #title {
+    font-size: 11vw;
+    margin: 0;
+    position: static;
+  }
+
+  #noticiasbutton2 {
+    width: 50%;
+    margin:0;
+  }
+  .textoesquerda {
+    margin: 10% 4% 1% 4%;
+     max-width: 100%;    
+   }
+
+#imgnews{
+  display: none;
+}
+
+
+ #proxevento{
+   font-size:4vw;
+ }
+ .titulonoticia {
+   font-size: 2vw;   
+   margin-bottom: 5%;
+ }
+ .descricaonoticia {
+   font-size: 2vw;
+   margin-bottom: 5%;
+
+ }
+ h2 {
+  font-size:3vw;
+  margin-bottom: 3%;
+  
+}
+ .email {
+  font-size: 2vw;
+  width: 70%;
+}
+
+.subscribe {
+  font-size: 1.7vw;
+  width: 30%;
+ 
+}
+
+}
+
+/*------------------------------- media queries smartphone ------------------------------- */
+
+
+
+@media screen and (min-width: 280px) and (max-width: 500px){   /* tamanho smartphones */
+  body{
+    max-width: auto;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    position: relative;
+    flex-direction: row;
+    margin: 3%;
+    }
+    
+
+  #title {
+    font-size: 13vw;
+    margin: 0;
+    position: static;
+  }
+
+  #noticiasbutton2 {
+    width: 60%;
+    margin:0;
+  }
+  #imgnews {
+    display: none; 
+    }
+
+.textoesquerda {
+     margin: 10% 4% 1% 4%;
+      max-width: 100%;    
+    }
+
+  #proxevento{
+    font-size:6vw;
+  }
+  .titulonoticia {
+    font-size: 4vw;   
+    margin-bottom: 5%;
+  }
+  .descricaonoticia {
+    font-size: 3.5vw;
+    margin-bottom: 5%;
+
+  }
+    footer {
+      text-align: center;
+    }
+
+    
+h2 {
+  font-size:4vw;
+  
+}
+
+.email {
+  text-align: center;
+  font-size: 3vw;
+  width: 70%;
+  padding: 1%;
+  margin-top: 2%;
+
+}
+
+.subscribe {
+  text-align: center;
+  padding: 1%;
+  margin-top: 3%;
+  font-size: 3vw;
+  width: 30%;
+ 
+}
+}

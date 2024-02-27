@@ -1,0 +1,322 @@
+/*the main styling runned in the page*/
+@font-face {
+  font-family: "ProtoGrotesk-Light";
+  src: url("../Fonts/ProtoGrotesk-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ProtoGrotesk-Regular";
+  src: url("../Fonts/ProtoGrotesk-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NeueHaasUnica";
+  src: url("../Fonts/NeueHaasUnica-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../Fonts/Inter-Bold.ttf") format("truetype");
+}
+/* Reset or normalize styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ /* Your styles here */
+
+body {
+    background: #A4B0F5;
+    color: white !important;
+    font-family: "NeueHaasUnica";
+    font-weight: 100;
+    overflow-x: hidden;
+}
+
+.nameOFpage {
+    position: fixed;
+    font-family: "ProtoGrotesk-Light";
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 10vw;
+    font-style: normal;
+    letter-spacing: -0.1rem;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 20px;
+    z-index: 9999;
+}
+
+.star_button{
+  height: 15vh;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+}
+
+/* funcionamento da big grid*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 5px;
+  transition: grid-template-columns 0.9s ease-in-out;
+}
+
+
+/*parece redondante, mas assim ele não ignora o grid no interior assim*/
+div.grid-container{
+  display:grid !important;
+}
+
+
+div.box {
+  width: 50vh;
+  margin: 5vh;
+  padding-top: 25px;
+  float:left;
+  text-align: center;
+  color: #fff;
+}
+
+/* fazer o efeito de aparecer e desaparecer */
+
+/* General styling for the image */
+.flexboxpic {
+  border-radius: 1.25rem;
+  height: calc(1.7/3 * 100vh);
+  transition: width 1s ease, box-shadow 0.6s ease;
+  margin-right: 20%;
+  cursor: pointer;
+}
+
+/* Initially hidden text and icons */
+.flexboxtextelements, .flexboxicons {
+  display: none;
+}
+
+/* Taking away the auto settings of the a element */
+.flexboxicons a{
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Details on hover */
+.flexboxpic:hover {
+  box-shadow: 60px 60px 60px rgba(112, 123, 135, 0.392);
+}
+
+/* Active state for the grid */
+.hidden-grid.active {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0;
+  margin: 5%;
+  border-radius: 1.25rem;
+  background: rgba(68, 68, 68, 0.30);
+  box-sizing: border-box;
+  width: min-content;
+}
+
+/* Active state for text details */
+.hidden-grid.active .flexboxtextelements {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  padding-left: 5%;
+  margin-right: 5%;
+  height: 95%;
+  color: white;
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+/* Active state for icons */
+.hidden-grid.active .flexboxicons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hidden-grid.active .flexboxicons img {
+  margin-bottom: 25px !important;
+  margin-left: 6rem !important;
+  margin-right: 2rem !important;
+  width: 3rem;
+}
+
+/* Styling for the name of the artist */
+.nameOFartist {
+  color: #FFF;
+  font-family: "ProtoGrotesk-Regular";
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.5625rem; /* 100% */
+  text-transform: uppercase;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+
+/* Media querys to correct abnormal behaviour */
+
+/* Media query for bigger screens, or, fullsized */
+
+@media screen and (min-width: 1400px) {
+  .hidden-grid.active {
+      overflow-wrap: break-word;
+      width: 90vw;
+  }
+
+  .hidden-grid.active .flexboxtextelements {
+      width: 47vw;
+      text-align: center;
+      padding-left: 20px;
+      margin-left: 20px;
+      word-wrap: break-word;
+  }
+
+  .hidden-grid.active .flexboxicons {
+      align-items: center;
+      margin: 0px;
+      gap: 0px;
+      padding: 0px;
+  }
+
+  .hidden-grid.active .flexboxicons img {
+      padding: 0%;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-bottom: 25px;
+      margin-top: 10px;
+  }
+}
+
+/* Media query for smaller screens or half the size */
+@media screen and (max-width: 960px) {
+
+  .star_button{
+      width: 8rem;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+  }
+
+  .hidden-grid.active {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      align-items: center;
+      overflow-wrap: break-word;
+      width: min-content;
+
+  }
+
+  .hidden-grid.active .flexboxpic {
+      height: auto;
+      width: 70vw;
+  }
+
+  .hidden-grid.active .flexboxtextelements {
+      width: 60%;
+      text-align: left;
+      margin-left: 5%;
+      word-wrap: break-word;
+  }
+
+  .hidden-grid.active .flexboxicons {
+      flex-direction: row;
+      align-items: center;
+      width: 60vw;
+      margin: 0px;
+      gap: 0px;
+      padding: 0px;
+  }
+
+  .hidden-grid.active .flexboxicons img {
+      padding: 0%;
+      width: 1.8rem;
+      margin-left: 0%;
+      margin-right: 0%;
+      margin-bottom: 25px;
+      margin-top: 10px;
+  }
+}
+
+/*for the smaller websizes and mobile and so on*/
+@media screen and (max-width: 500px){
+  body{
+      width: 100%;
+      overflow-x: hidden;
+      padding: 0px;
+      margin: 0px;
+  }
+  .nameOFpage{
+      padding: auto;
+      margin: auto;
+      left: auto;
+  }
+
+  .star_button{
+      height: auto;
+      width: 79px;
+  }
+
+  .grid_container{
+      width: 420px;
+      padding: 0px;
+      padding: 0px;
+  }
+
+  .flexboxpic {
+      height: auto;
+      width: 270px;
+  }
+
+  .hidden-grid.active{
+      padding: 0px;
+      margin: 0px;
+  }
+  
+  .hidden-grid.active .flexboxtextelements {
+      width: 5px;
+      text-align: left;
+      font-size: 10px;
+      margin-left: 5%;
+      flex-wrap: wrap;
+  }
+
+  .hidden-grid.active .flexboxpic {
+      height: auto;
+      width: 280px;
+      margin-bottom: 5px;
+  }
+  .hidden-grid.active .flexboxicons {
+      display: flex;
+      align-items: center;
+      margin: 0px;
+      gap: 20px;
+      padding: 0px;
+      width: 20px;
+  }
+
+  .hidden-grid.active .flexboxicons img {
+      padding: 20%;
+      width: 15px;
+      margin: 0px;
+  }
+
+  .hidden-grid.active .flexboxicons a {
+      padding: 40%;
+      width: 15px;
+      margin: 0px;
+      align-items: center;
+
+  }
+}
